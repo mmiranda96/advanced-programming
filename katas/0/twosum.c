@@ -83,17 +83,15 @@ int* twoSum(int *nums, int numSize, int target) {
     init(&ht, numSize, 5);
 
     for (int i = 0; i < numSize; i++) {
-        if (nums[i] <= target) {
+        if (nums[i] <= target)
             add(&ht, nums[i], i);
-        }
     }
 
     for (int i = 0; i < numSize; i++) {
         if (nums[i] <= target) {
             int inv = target - nums[i];
-            if (inv == nums[i]) {
+            if (inv == nums[i])
                 continue;
-            }
             int j = get(&ht, inv);
             if (j >= 0) {
                 int *result = (int*)malloc(sizeof(int) * 2);
