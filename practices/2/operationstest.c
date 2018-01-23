@@ -48,4 +48,3 @@ int testSubstraction()
     int expected = a - b;
     return result == expected;
 }
-
