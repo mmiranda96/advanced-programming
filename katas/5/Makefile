@@ -1,5 +1,4 @@
-run: wordcount
-	 ./wordcount.exe
+default: wordcount
 
 hash.o:
 	gcc -c hash.c -o hash.o

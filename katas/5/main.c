@@ -8,7 +8,12 @@
 void displayHash(Hash *);
 
 int main(int argc, char **argv) {
-    FILE *file = fopen("words.txt", "r");
+    if (argc != 2) {
+        printf("Executable must contain a file to analyze.\n");
+        return 1;
+    }
+
+    FILE *file = fopen(argv[1], "r");
     Hash h = wordcount(file);
     displayHash(&h);
     return 0;
